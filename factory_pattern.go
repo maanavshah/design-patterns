@@ -2,45 +2,45 @@ package main
 
 import "fmt"
 
-type ModeFactory interface {
-	SearchWithMode()
+// Seat interface
+type Seat interface {
+	GetDetails() string
+	GetPrice() int
 }
 
-type AutosuggestMode struct{}
+// Concrete seat types
+type EconomySeat struct{}
+func (e *EconomySeat) GetDetails() string { return "Economy: Basic seat, no extras" }
+func (e *EconomySeat) GetPrice() int { return 100 }
 
-func (m AutosuggestMode) SearchWithMode() {
-	fmt.Println("AutosuggestMode enabled")
-}
+type PremiumSeat struct{}
+func (p *PremiumSeat) GetDetails() string { return "Premium: Comfortable seat, extra legroom" }
+func (p *PremiumSeat) GetPrice() int { return 200 }
 
-type ThemeMode struct{}
+type VIPSeat struct{}
+func (v *VIPSeat) GetDetails() string { return "VIP: Luxury recliner, complimentary snacks" }
+func (v *VIPSeat) GetPrice() int { return 500 }
 
-func (m ThemeMode) SearchWithMode() {
-	fmt.Println("ThemeMode enabled")
-}
-
-type DefaultSearchMode struct{}
-
-func (m DefaultSearchMode) SearchWithMode() {
-	fmt.Println("DefaultSearchMode enabled")
-}
-
-func GetFactory(mode string) ModeFactory {
-	switch mode {
-	case "autosuggest":
-		return AutosuggestMode{}
-	case "theme":
-		return ThemeMode{}
+// Box Office Factory
+func BookSeat(seatType string) Seat {
+	switch seatType {
+	case "economy":
+		return &EconomySeat{}
+	case "premium":
+		return &PremiumSeat{}
+	case "vip":
+		return &VIPSeat{}
+	default:
+		return &EconomySeat{} // default to economy
 	}
-	return DefaultSearchMode{}
 }
 
 func main() {
-	modeFactory := GetFactory("autosuggest")
-	modeFactory.SearchWithMode()
-
-	modeFactory = GetFactory("theme")
-	modeFactory.SearchWithMode()
-
-	modeFactory = GetFactory("default")
-	modeFactory.SearchWithMode()
+	// Customer booking different seat types
+	bookings := []string{"economy", "premium", "vip"}
+	
+	for _, booking := range bookings {
+		seat := BookSeat(booking)  // Factory creates right seat type
+		fmt.Printf("%s - Price: ₹%d\n", seat.GetDetails(), seat.GetPrice())
+	}
 }
