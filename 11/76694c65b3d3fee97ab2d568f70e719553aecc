@@ -1,0 +1,53 @@
+java/facade_pattern/FacadePattern.java
+  8ae3fed8-0ef1-4d07-855b-45cfd2ec27d2 1-76
+.gitignore
+  h_f947c82ed2b1dc 26-50
+java/adapter_pattern/AdapterPattern.java
+  8ae3fed8-0ef1-4d07-855b-45cfd2ec27d2 1-40
+java/strategy_pattern/StrategyPattern.java
+  8ae3fed8-0ef1-4d07-855b-45cfd2ec27d2 1-74
+java/factory_pattern/FactoryPattern.java
+  8ae3fed8-0ef1-4d07-855b-45cfd2ec27d2 1-66
+java/observer_pattern/ObserverPattern.java
+  8ae3fed8-0ef1-4d07-855b-45cfd2ec27d2 1-63
+java/singleton_pattern/SingletonPattern.java
+  8ae3fed8-0ef1-4d07-855b-45cfd2ec27d2 1-41
+java/builder_pattern/BuilderPattern.java
+  8ae3fed8-0ef1-4d07-855b-45cfd2ec27d2 1-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "1176694c65b3d3fee97ab2d568f70e719553aecc",
+  "prompts": {
+    "82ff3ea5a32efef6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8ae3fed8-0ef1-4d07-855b-45cfd2ec27d2",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Maanav Shah <maanav.shah@harness.io>",
+      "total_additions": 472,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "c26453b7849b736b": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5d810936-b721-4fb7-ba91-443e96ecf3f5",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Maanav Shah <maanav.shah@harness.io>",
+      "total_additions": 41,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  },
+  "humans": {
+    "h_f947c82ed2b1dc": {
+      "author": "Maanav Shah <maanav.shah@harness.io>"
+    }
+  }
+}
