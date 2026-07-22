@@ -1,0 +1,20 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "5c7546dd2fa04cf5f1d21d1e156d5c577513652d",
+  "prompts": {
+    "f82d0b8d3a169865": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a0794b28-41d6-4827-8092-6a3cd01f6745",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Maanav Shah <shah.maanav.07@gmail.com>",
+      "total_additions": 7,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}
